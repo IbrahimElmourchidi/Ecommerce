@@ -23,8 +23,6 @@ _**More features will be added in time**_
 - Django
 - SQLite
 
-_**Typescript is used as the main Programming language for both Backend and Frontend.**_
-
 # How to navigate this repo
 
 This repo contains **user_stories** folder, in which each development step is represented by a single user story.
