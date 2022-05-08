@@ -32,3 +32,5 @@ The DevLog below contains a Log for every development step with links to the use
 # DevLog
 
 This takes you step by step how this project was built.
+
+- [Day 001: create basic models](https://github.com/IbrahimElmourchidi/Django-Ecommerce/blob/development/user_stories/001.md)

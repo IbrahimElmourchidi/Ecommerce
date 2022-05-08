@@ -1,22 +1,27 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <main class="container my-4">
-	<!-- Featured Products -->
-	<h3 class="my-4 border-bottom pb-1">Brands</h3>
-	<div class="row">
-		{% if data %}
-			{% for brand in data %}
-			<div class="col-md-3 mb-4">
-				<div class="card shadow">
-				<a href="/brand-product-list/{{brand.id}}"><img src="/media/{{brand.image}}" class="card-img-top" alt="{{brand.title}}" /></a>
-				<div class="card-body">
-					<h6 class="card-text"><a href="#">{{brand.title}}</a></h6>
-				</div>
-				</div>
-			</div>
-			{% endfor %}
-		{% endif %}
-	</div>
+  <!-- Featured Products -->
+  <h3 class="my-4 border-bottom pb-1">Brands</h3>
+  <div class="row">
+    {% if brands %} {% for brand in brands %}
+    <div class="col-md-3 mb-4">
+      <div class="card shadow">
+        <a href="/brand-product-list/{{brand.id}}"
+          ><img
+            src="/media/{{brand.image}}"
+            class="card-img-top"
+            alt="{{brand.title}}"
+            width="150px"
+            height="150px"
+        /></a>
+        <div class="card-body">
+          <h6 class="card-text">
+            <a href="/brand-product-list/{{brand.id}}">{{brand.title}}</a>
+          </h6>
+        </div>
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+  </div>
 </main>
 {% endblock %}
