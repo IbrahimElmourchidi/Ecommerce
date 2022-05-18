@@ -3,9 +3,11 @@ from .views import *
 
 from django.conf import settings
 from django.conf.urls.static import static
+import json
+from django.http import HttpResponse
 
 urlpatterns = [
-    path('', home),
+    path('', home, name="home"),
     path('category-list', category_list, name='category-list'),
     path('brand-list', brand_list, name='brand-list'),
     path('product-list', product_list, name='product-list'),
@@ -15,6 +17,12 @@ urlpatterns = [
          name='brand-product-list'),
     path('product/<str:slug>/<int:id>', product_detail,
          name='product-detail'),
+    path('accounts/signup', signup,
+         name='signup'),
+    path('add-to-cart/', add_to_cart, name='add_to_cart'),
+    path('cart/', cart_list, name='cart'),
+    path('delete-from-cart/', delete_cart_item, name='delete-from-cart'),
+    path('update-cart/', update_cart_item, name='update-cart'),
 ]
 
 if settings.DEBUG:

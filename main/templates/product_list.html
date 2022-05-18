@@ -13,9 +13,9 @@
           <div class="card shadow">
             <a href="/product/{{product.slug}}/{{product.id}}"
               ><img
-                src="/media/{{product.image}}"
+                src="/media/{{product.productattribute_set.first.image}}"
                 class="card-img-top"
-                alt="{{product.title}}"
+                alt="{{product.productattribute_set.first.title}}"
                 width="150px"
                 height="150px"
             /></a>
@@ -27,7 +27,7 @@
               </h5>
               <h6>
                 $
-                <span>{{product.price}}</span>
+                <span>{{product.productattribute_set.first.price}}</span>
               </h6>
             </div>
             <div class="card-footer">

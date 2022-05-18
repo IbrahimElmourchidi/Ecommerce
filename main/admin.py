@@ -20,7 +20,7 @@ admin.site.register(Size)
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'price', 'status']
+    list_display = ['title', 'category', 'status']
     list_editable = ['status']
 
 
@@ -28,7 +28,7 @@ admin.site.register(Product, ProductAdmin)
 
 
 class ProductAttributeAdmin(admin.ModelAdmin):
-    list_display = ['id', 'product', 'color']
+    list_display = ['id', 'product', 'color', 'price', 'image_tag']
 
 
 admin.site.register(ProductAttribute, ProductAttributeAdmin)

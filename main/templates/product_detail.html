@@ -7,7 +7,7 @@
 	<div class="row">
 		<!-- Images -->
 		<div class="col-md-4">
-			<img id="zoom_01" data-zoom-image="/media/{{data.image}}" src="/media/{{data.image}}" class="card-img-top" alt="{{data.title}}">
+			<img id="zoom_01" data-zoom-image="/media/{{data.dataattribute_set.first.image}}" src="/media/{{data.productattribute_set.first.image}}" class="card-img-top" alt="{{data.title}}">
 		</div>
 		<div class="col-md-8">
 			<p>{{data.detail}}</p>
@@ -26,13 +26,14 @@
 					<td>
 						{% for p_attr in data.productattribute_set.all %}
 						<button class="btn btn-secondary btn-md">{{p_attr.size}}</button>
-						{% endfor %}
+						
 					</td>
 				</tr>
 				<tr>
 					<th>Price</th>
-					<th>$ <span class="product-price-{{data.id}}">{{data.price}}</span></th>
+					<th>$ <span class="product-price-{{data.id}}">{{p_attr.price}}</span></th>
 				</tr>
+				{% endfor %}
 			</table>
 			<hr/>
 			<div class="input-group my-3" style="width:30%;">

@@ -19,4 +19,5 @@ from main import urls as main
 urlpatterns = [
     path('', include(main)),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
